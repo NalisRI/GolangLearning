@@ -15,10 +15,14 @@ pipeline {
                 sh 'go mod download'
 //                 sh 'go mod tidy'
                 sh 'go get github.com/onsi/ginkgo/v2/ginkgo'
+                sh 'echo $GOPATH'
+                sh 'echo $GOBIN'
             }
         }
         stage('Ginkgo') {
                     steps {
+                        sh 'echo $GOPATH'
+                        sh 'echo $GOBIN'
                         sh 'ginkgo -v ./address-api-tests'
                     }
                 }
