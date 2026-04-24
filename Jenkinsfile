@@ -17,7 +17,7 @@ pipeline {
 
                 sh 'go mod download'
 //                 sh 'go mod tidy'
-                sh 'go get github.com/onsi/ginkgo/v2/ginkgo'
+                sh 'go install -mod=mod github.com/onsi/ginkgo/v2/ginkgo'
                 sh 'echo "GOPATH: $GOPATH"'
                                 sh 'echo "GOBIN: $GOBIN"'
             }
