@@ -5,7 +5,7 @@ import (
 	. "github.com/onsi/gomega"
 )
 
-var _ = FDescribeTable("Thirdscenario", func(a, b, c int) {
+var _ = DescribeTable("Thirdscenario", func(a, b, c int) {
 	result := a + b
 	Expect(result).To(Equal(c))
 },
